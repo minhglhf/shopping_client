@@ -22,10 +22,10 @@ $baseurl = 'http://127.0.0.1:8001';
 {{--                                    <h1><span>E</span>-SHOPPER</h1>--}}
                                     <h2>{{$slider->name}}</h2>
                                     <p>{{$slider->description}} </p>
-                                    <button type="button" class="btn btn-default get">Get it now</button>
+{{--                                    <button type="button" class="btn btn-default get">Get it now</button>--}}
                                 </div>
                                 <div class="col-sm-6">
-                                    <img src="{{$baseurl . $slider->image_path }}" class=" img-responsive" alt=""/>
+                                    <img src="{{$baseurl . $slider->image_path }}" class="girl img-responsive" alt=""/>
 {{--                                    <img src="/eshopper/images/home/girl1.jpg" class="girl img-responsive" alt="" />--}}
 {{--                                                                        <img src="/eshopper/images/home/pricing.png" class="pricing" alt=""/>--}}
                                 </div>
