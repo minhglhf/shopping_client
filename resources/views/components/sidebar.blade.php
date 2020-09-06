@@ -26,7 +26,7 @@
 
                                     @foreach($category->categoryChildren as $categoryChild)
                                         <div class="panel-heading">
-                                            <h4 class="panel-title">
+{{--                                            <h4 class="panel-title">--}}
                                                 <a data-toggle="collapse" data-parent="#accordian2"
                                                    href="#{{$categoryChild->id}}">
                                                 <span class="badge pull-right">
@@ -36,7 +36,7 @@
                                                 </span>
                                                     {{$categoryChild->name}}
                                                 </a>
-                                            </h4>
+{{--                                            </h4>--}}
                                         </div>
 
                                         <div id="{{$categoryChild->id}}" class="panel-collapse collapse">
