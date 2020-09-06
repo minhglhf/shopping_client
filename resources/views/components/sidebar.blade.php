@@ -7,14 +7,20 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordian" href="#{{$category->id}}">
+                            @if($category->categoryChildren->count())
+                                <a data-toggle="collapse" data-parent="#accordian" href="#{{$category->id}}">
                                 <span class="badge pull-right">
-                                    @if($category->categoryChildren->count())
                                         <i class="fa fa-plus"></i>
-                                    @endif
                                 </span>
-                                {{$category->name}}
-                            </a>
+                                    {{$category->name}}
+                                </a>
+                            @else
+                                <a href="{{route('category.product',['slug' => $category->slug, 'id' => $category->id ])}}">
+                                <span class="badge pull-right">
+                                </span>
+                                    {{$category->name}}
+                                </a>
+                            @endif
                         </h4>
                     </div>
 
@@ -27,15 +33,35 @@
                                     @foreach($category->categoryChildren as $categoryChild)
                                         <div class="panel-heading">
                                             {{--                                            <h4 class="panel-title">--}}
-                                            <a data-toggle="collapse" data-parent="#accordian2"
-                                               href="#{{$categoryChild->id}}">
-                                                <span class="badge pull-right">
-                                                    @if($categoryChild->categoryChildren->count())
-                                                        <i class="fa fa-plus"></i>
-                                                    @endif
-                                                </span>
-                                                <li><a href="#">{{$categoryChild->name}}</a></li>
-                                            </a>
+
+
+                                            {{--                                            <a data-toggle="collapse" data-parent="#accordian2"--}}
+                                            {{--                                               href="#{{$categoryChild->id}}">--}}
+                                            {{--                                                <span class="badge pull-right">--}}
+                                            {{--                                                    @if($categoryChild->categoryChildren->count())--}}
+                                            {{--                                                        <i class="fa fa-plus"></i>--}}
+                                            {{--                                                    @endif--}}
+                                            {{--                                                </span>--}}
+                                            {{--                                                <li><a href="#">{{$categoryChild->name}}</a></li>--}}
+                                            {{--                                            </a>--}}
+
+                                            @if($categoryChild->categoryChildren->count())
+                                                <a data-toggle="collapse" data-parent="#accordian2"
+                                                   href="#{{$categoryChild->id}}">
+                                <span class="badge pull-right">
+                                        <i class="fa fa-plus"></i>
+                                </span>
+                                                    {{$categoryChild->name}}
+                                                </a>
+                                            @else
+                                                <a href="{{route('category.product',['slug' => $categoryChild->slug, 'id' => $categoryChild->id ])}}">
+                                <span class="badge pull-right">
+                                </span>
+                                                    {{$categoryChild->name}}
+                                                </a>
+                                            @endif
+
+
                                             {{--                                            </h4>--}}
                                         </div>
 
