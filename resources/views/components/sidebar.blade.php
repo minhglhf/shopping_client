@@ -26,17 +26,17 @@
 
                                     @foreach($category->categoryChildren as $categoryChild)
                                         <div class="panel-heading">
-{{--                                            <h4 class="panel-title">--}}
-                                                <a data-toggle="collapse" data-parent="#accordian2"
-                                                   href="#{{$categoryChild->id}}">
+                                            {{--                                            <h4 class="panel-title">--}}
+                                            <a data-toggle="collapse" data-parent="#accordian2"
+                                               href="#{{$categoryChild->id}}">
                                                 <span class="badge pull-right">
                                                     @if($categoryChild->categoryChildren->count())
                                                         <i class="fa fa-plus"></i>
                                                     @endif
                                                 </span>
-                                                    {{$categoryChild->name}}
-                                                </a>
-{{--                                            </h4>--}}
+                                                <li><a href="#">{{$categoryChild->name}}</a></li>
+                                            </a>
+                                            {{--                                            </h4>--}}
                                         </div>
 
                                         <div id="{{$categoryChild->id}}" class="panel-collapse collapse">
@@ -45,7 +45,9 @@
 
                                                     @foreach($categoryChild->categoryChildren as $categoryChildChild)
                                                         <li>
-                                                            <a href="#{{$categoryChildChild->id}}">{{$categoryChildChild->name}} </a>
+                                                            <a href="{{route('category.product',['slug' => $categoryChildChild->slug, 'id' => $categoryChildChild->id ])}}">
+                                                                {{$categoryChildChild->name}}
+                                                            </a>
                                                         </li>
                                                     @endforeach
                                                 </ul>

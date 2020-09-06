@@ -6,9 +6,8 @@ use App\Category;
 use App\Product;
 use App\Slider;
 use Illuminate\Http\Request;
-use function Symfony\Component\String\s;
 
-class HomeController extends Controller
+class CategoryController extends Controller
 {
     private $slider;
     private $category;
@@ -21,14 +20,9 @@ class HomeController extends Controller
         $this->product = $product;
     }
 
-    public function index()
-    {
-        $sliders = $this->slider->latest()->get();
+    public function index($slug, $categoryId){
         $categories = $this->category->where('parent_id', 0)->get();
-        $products = $this->product->latest()->take(6)->get();
-
-        return view('home.home', compact('sliders', 'categories', 'products'));
+        $products = $this->product->where('category_id', $categoryId)->paginate(12);
+        return view ('product.category.list', compact('categories', 'products'));
     }
-
-
 }
