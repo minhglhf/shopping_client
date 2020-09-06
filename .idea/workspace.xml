@@ -20,13 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c24c3b6-9711-47d3-8d28-2eff8cba5ea1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Helpers/Helper.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Setting.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shopping_client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shopping_client.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/home/components/child_menu.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/home/components/main_menu.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/components/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +183,7 @@
       <workItem from="1599280388120" duration="882000" />
       <workItem from="1599288896319" duration="14073000" />
       <workItem from="1599317025447" duration="5316000" />
-      <workItem from="1599351596279" duration="1642000" />
+      <workItem from="1599351596279" duration="3466000" />
     </task>
     <servers />
   </component>
