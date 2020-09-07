@@ -1,14 +1,12 @@
-<div class="mainmenu pull-left">
-    <ul class="nav navbar-nav collapse navbar-collapse">
+<div class="mainmenu ">
+    <ul class="nav navbar-nav collapse navbar-collapse" >
         <li><a href="{{ route('home') }}" class="active">Home</a></li>
 
         @foreach($categories as $category)
-            <li class="dropdown"><a href="#">{{$category->name}}<i class="fa fa-angle-down"></i></a>
+            <li class="dropdown"><a href="{{route('category.product',['slug' => $category->slug, 'id' => $category->id ])}}">{{$category->name}}</a>
                 @include('home.components.child_menu', ['category' => $category])
             </li>
         @endforeach
 
-        <li><a href="404.html">404</a></li>
-        <li><a href="contact-us.html">Contact</a></li>
     </ul>
 </div>

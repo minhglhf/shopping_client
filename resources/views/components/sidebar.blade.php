@@ -1,5 +1,5 @@
-<div class="col-sm-3">
-    <div class="left-sidebar">
+<div class="col-sm-12">
+    <div class=right-sidebar">
         <h2>Danh Mục Sản Phẩm</h2>
         <div class="panel-group category-products" id="accordian"><!--category-productsr-->
 

@@ -12,6 +12,8 @@ $baseurl = config('app.base_url');
                         <li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
                         <li data-target="#slider-carousel" data-slide-to="1"></li>
                         <li data-target="#slider-carousel" data-slide-to="2"></li>
+                        <li data-target="#slider-carousel" data-slide-to="4"></li>
+                        <li data-target="#slider-carousel" data-slide-to="5"></li>
                     </ol>
 
                     <div class="carousel-inner">
@@ -20,12 +22,12 @@ $baseurl = config('app.base_url');
                             <div class="item {{ $key==0 ? 'active' : '' }}">
                                 <div class="col-sm-6">
 {{--                                    <h1><span>E</span>-SHOPPER</h1>--}}
-                                    <h2>{{$slider->name}}</h2>
-                                    <p>{{$slider->description}} </p>
+{{--                                    <h2>{{$slider->name}}</h2>--}}
+{{--                                    <p>{{$slider->description}} </p>--}}
 {{--                                    <button type="button" class="btn btn-default get">Get it now</button>--}}
                                 </div>
-                                <div class="col-sm-6">
-                                    <img src="{{$baseurl . $slider->image_path }}" class="girl img-responsive" alt=""/>
+                                <div class="col-sm-12">
+                                    <img src="{{$baseurl . $slider->image_path }}" class="img-responsive" alt="" style="width: 100%"/>
 {{--                                    <img src="/eshopper/images/home/girl1.jpg" class="girl img-responsive" alt="" />--}}
 {{--                                                                        <img src="/eshopper/images/home/pricing.png" class="pricing" alt=""/>--}}
                                 </div>

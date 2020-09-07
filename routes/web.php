@@ -20,3 +20,8 @@ Route::get('/category/{slug}/{id}',[
     'uses' => 'CategoryController@index'
 ]);
 
+Route::get('/product/{id}',[
+    'as' => 'product.product_detail',
+    'uses' => 'ProductController@index'
+]);
+

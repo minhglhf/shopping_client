@@ -25,9 +25,12 @@ class HomeController extends Controller
     {
         $sliders = $this->slider->latest()->get();
         $categories = $this->category->where('parent_id', 0)->get();
-        $products = $this->product->latest()->take(6)->get();
+        $categoriesTab = $this->category->all();
+        $products = $this->product->latest()->take(8)->get();
 
-        return view('home.home', compact('sliders', 'categories', 'products'));
+
+
+        return view('home.home', compact('sliders', 'categories', 'products','categoriesTab'));
     }
 
 

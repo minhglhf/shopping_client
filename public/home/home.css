@@ -192,8 +192,9 @@
         position: relative;
         width: auto;
         display: block;
-        background: transparent;
-        box-shadow: none;
+        background-color: white;
+        /*background: transparent;*/
+        /*box-shadow: none;*/
         top: 0;
     }
 
@@ -380,8 +381,8 @@
         position: relative;
         width: auto;
         display: block;
-        background: transparent;
-        box-shadow: none;
+        /*background: transparent;*/
+        /*box-shadow: none;*/
         top: 0;
     }
 

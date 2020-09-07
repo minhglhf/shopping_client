@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Slider extends Model
 {
-    protected $table = 'sliders';
     use SoftDeletes;
+    protected $table = 'sliders';
+
 }
