@@ -1,12 +1,7 @@
-<?php
-use Illuminate\Support\Facades\Session;
 
-?>
-<?php $number = 1 ?>
+
 @foreach($category->products as $productItemTab)
-    <?php $session = Session::get('counter'); ?>
-    @if(\Illuminate\Support\Facades\Session::get('counter') <= 6)
-        {{\Illuminate\Support\Facades\Session::put('counter', 1+$session)}}
+
         <div class="col-sm-2">
             <div class="product-image-wrapper">
                 <div class="single-products">
@@ -24,7 +19,7 @@ use Illuminate\Support\Facades\Session;
             </div>
         </div>
 
-    @endif
+
 @endforeach
 
 

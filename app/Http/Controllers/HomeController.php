@@ -29,7 +29,6 @@ class HomeController extends Controller
         $products = $this->product->latest()->take(8)->get();
 
 
-
         return view('home.home', compact('sliders', 'categories', 'products','categoriesTab'));
     }
 
