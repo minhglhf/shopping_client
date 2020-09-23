@@ -32,3 +32,5 @@ Route::get('/products/delete-cart', 'ProductController@deleteCart')->name('delet
 
 
 Route::get('/products/show-cart', 'ProductController@showCart')->name('showCart');
+
+Route::get('/products/checkout', 'ProductController@checkout')->name('checkout');

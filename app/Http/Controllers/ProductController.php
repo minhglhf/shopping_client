@@ -80,7 +80,8 @@ class ProductController extends Controller
 //        echo '<pre>';
 //        print_r(dd(Session::get('cart')));
         $carts = Session::get('cart');
-        return view('product.product_detail.cart', compact('carts'));
+        $categories = $this->category->where('parent_id', 0)->get();
+        return view('product.product_detail.cart', compact('carts', 'categories'));
     }
 
     public function updateCart(Request $request){
@@ -121,6 +122,11 @@ class ProductController extends Controller
 
             ], 200);
         }
+    }
+
+    public function checkout(){
+        $categories = $this->category->where('parent_id', 0)->get();
+        return view('product.product_detail.checkout', compact('categories'));
     }
 
 }

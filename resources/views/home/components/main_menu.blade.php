@@ -1,4 +1,4 @@
-<div class="mainmenu ">
+<div class="mainmenu">
     <ul class="nav navbar-nav collapse navbar-collapse" >
         <li><a href="{{ route('home') }}" class="active">Home</a></li>
 

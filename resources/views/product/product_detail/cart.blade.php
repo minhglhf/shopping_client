@@ -1,13 +1,11 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="{{asset('eshopper/css/bootstrap.min.css')}}" rel="stylesheet">
+@extends('layouts.master')
 
-    <title>Show Cart</title>
+@section('title')
+    home_page
+@endsection
+
+@section('css')
+    <link rel="stylesheet" href="{{asset('home/home.css')}}">
     <style>
         th {
             text-align: center;
@@ -17,8 +15,10 @@
             vertical-align: center;
         }
     </style>
-</head>
-<body>
+@endsection
+
+
+@section('content')
 
 <div class="cart_wrapper">
 
@@ -86,7 +86,7 @@
     });
 </script>
 
-
-
-</body>
-</html>
+@endsection
+@section('js')
+    <script src="{{ asset('home/home.js') }}"></script>
+@endsection

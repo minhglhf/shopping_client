@@ -23,18 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c24c3b6-9711-47d3-8d28-2eff8cba5ea1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/product/product_detail/cart.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/product/product_detail/components/cart_component.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/product/product_detail/checkout.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Eshopper/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/Eshopper/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/home/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/home/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/components/slider.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/components/slider.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/product/product_detail/product_detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/product/product_detail/product_detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/components/main_menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/components/main_menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/product/product_detail/cart.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/product/product_detail/cart.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/product/product_detail/components/cart_component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/product/product_detail/components/cart_component.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -205,7 +199,8 @@
       <workItem from="1600744131619" duration="7606000" />
       <workItem from="1600770501600" duration="2254000" />
       <workItem from="1600775063733" duration="22109000" />
-      <workItem from="1600822450701" duration="3339000" />
+      <workItem from="1600822450701" duration="4074000" />
+      <workItem from="1600864407926" duration="4246000" />
     </task>
     <servers />
   </component>
