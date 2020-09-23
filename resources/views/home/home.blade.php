@@ -22,6 +22,11 @@
             <div class="row">
 {{--                @include('components.sidebar')--}}
 
+                <div class="col-sm-12" >
+                    <a href="{{ route('showCart') }}" style=" border-radius: 50%; font-size: 50px; position: fixed; top: 100px; right: 0;" class="btn btn-primary mb-3" >
+                        <i class="fa fa-shopping-cart"></i></a>
+                </div>
+
                 <div class="col-sm-12 padding-right">
                     <!--features_items-->
 {{--                    @include('home.components.feature_product')--}}

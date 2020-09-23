@@ -34,6 +34,7 @@
             /*and also for touch screens:*/
             lens.addEventListener("touchmove", moveLens);
             img.addEventListener("touchmove", moveLens);
+
             function moveLens(e) {
                 var pos, x, y;
                 /*prevent any other actions that may occur when moving over the image:*/
@@ -44,16 +45,25 @@
                 x = pos.x - (lens.offsetWidth / 2);
                 y = pos.y - (lens.offsetHeight / 2);
                 /*prevent the lens from being positioned outside the image:*/
-                if (x > img.width - lens.offsetWidth) {x = img.width - lens.offsetWidth;}
-                if (x < 0) {x = 0;}
-                if (y > img.height - lens.offsetHeight) {y = img.height - lens.offsetHeight;}
-                if (y < 0) {y = 0;}
+                if (x > img.width - lens.offsetWidth) {
+                    x = img.width - lens.offsetWidth;
+                }
+                if (x < 0) {
+                    x = 0;
+                }
+                if (y > img.height - lens.offsetHeight) {
+                    y = img.height - lens.offsetHeight;
+                }
+                if (y < 0) {
+                    y = 0;
+                }
                 /*set the position of the lens:*/
                 lens.style.left = x + "px";
                 lens.style.top = y + "px";
                 /*display what the lens "sees":*/
                 result.style.backgroundPosition = "-" + (x * cx) + "px -" + (y * cy) + "px";
             }
+
             function getCursorPos(e) {
                 var a, x = 0, y = 0;
                 e = e || window.event;
@@ -65,88 +75,106 @@
                 /*consider any page scrolling:*/
                 x = x - window.pageXOffset;
                 y = y - window.pageYOffset;
-                return {x : x, y : y};
+                return {x: x, y: y};
             }
         }
     </script>
 
     <section>
         <div class="container">
+
+
             <div class="row">
+                <div class="col-sm-12">
+                    <a href="{{ route('showCart') }}"
+                       style=" border-radius: 50%; font-size: 50px; position: fixed; top: 100px; right: 0;"
+                       class="btn btn-primary mb-3">
+                        <i class="fa fa-shopping-cart"></i></a>
+                </div>
 
                 <!--product-details-->
-                <div class="col-sm-12 padding-right">
-                    <div class="product-details">
-                        <div class="col-sm-5">
-                            <div class="view-product">
-                                <div class="img-zoom-container">
-                                    <img id="myimage"
-                                         src="{{  config('app.base_url') . $productItem->feature_image_path }}"
-                                         width="300" height="240">
-                                    <div id="myresult" class="img-zoom-result"></div>
+
+                    <div class="col-sm-12 padding-right">
+                        <div class="product-details">
+                            <div class="col-sm-5">
+                                <div class="view-product">
+                                    <div class="img-zoom-container">
+                                        <img id="myimage"
+                                             src="{{  config('app.base_url') . $productItem->feature_image_path }}"
+                                             width="300" height="240">
+                                        <div id="myresult" class="img-zoom-result"></div>
+                                    </div>
+                                    {{--                                <img src="{{  config('app.base_url') . $productItem->feature_image_path }}" alt=""/>--}}
+                                    <h3>ZOOM</h3>
                                 </div>
-                                {{--                                <img src="{{  config('app.base_url') . $productItem->feature_image_path }}" alt=""/>--}}
-                                <h3>ZOOM</h3>
-                            </div>
-                            <div id="similar-product" class="carousel slide" data-ride="carousel">
+                                <div id="similar-product" class="carousel slide" data-ride="carousel">
 
-                                <!-- Wrapper for slides -->
-                                <div class="carousel-inner">
+                                    <!-- Wrapper for slides -->
+                                    <div class="carousel-inner">
 
-                                    @foreach($productImages as $key => $productImage)
-                                        <div class="item {{ $key==0 ? 'active' : '' }}">
-                                            <a href=""><img
-                                                    src="{{  config('app.base_url') . $productImage->image_path }}"
-                                                    alt=""></a>
-                                        </div>
-                                    @endforeach
+                                        @foreach($productImages as $key => $productImage)
+                                            <div class="item {{ $key==0 ? 'active' : '' }}">
+                                                <a href=""><img
+                                                        src="{{  config('app.base_url') . $productImage->image_path }}"
+                                                        alt=""></a>
+                                            </div>
+                                        @endforeach
 
+                                    </div>
+
+                                    <!-- Controls -->
+                                    <a class="left item-control" href="#similar-product" data-slide="prev">
+                                        <i class="fa fa-angle-left"></i>
+                                    </a>
+                                    <a class="right item-control" href="#similar-product" data-slide="next">
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
                                 </div>
 
-                                <!-- Controls -->
-                                <a class="left item-control" href="#similar-product" data-slide="prev">
-                                    <i class="fa fa-angle-left"></i>
-                                </a>
-                                <a class="right item-control" href="#similar-product" data-slide="next">
-                                    <i class="fa fa-angle-right"></i>
-                                </a>
                             </div>
 
-                        </div>
 
-                        <div class="col-sm-7">
-                            <div class="product-information"><!--/product-information-->
-                                <img src="{{asset('Eshopper/images/product-details/new.jpg')}}" class="newarrival"
-                                     alt=""/>
-                                <h2>{{ $productItem->name }}</h2>
-                                <p>Product_id: {{$productItem->id}}</p>
-                                <img src="{{asset('Eshopper/images/product-details/rating.png')}}" alt=""/>
-                                <br>
-                                <span>
+                            <div class="col-sm-7">
+                                <div class="product-information"><!--/product-information-->
+                                    <img src="{{asset('Eshopper/images/product-details/new.jpg')}}" class="newarrival"
+                                         alt=""/>
+                                    <h2>{{ $productItem->name }}</h2>
+                                    <p>Product_id: {{$productItem->id}}</p>
+                                    <img src="{{asset('Eshopper/images/product-details/rating.png')}}" alt=""/>
+                                    <br>
+                                    <span>
 									<span>{{ $productItem->price }}</span>
                                     <br>
-									<label>Quantity:</label>
-									<input type="text" value="3"/>
-                                    <br>
-                                    <br>
-                                    <br>
-									<button type="button" class="btn btn-fefault cart">
-										<i class="fa fa-shopping-cart"></i>
-										Add to cart
-									</button>
-								</span>
-                            </div><!--/product-information-->
-                        </div>
+{{--									<label>Quantity:</label>--}}
 
-                        <div class="col-sm-5">
-                            <div class="category-tab shop-details-tab">
-                                <div class="tab-content">
-                                    <div class="tab-pane fade active in" id="details">
-                                        <div>
-                                            <div class="product-image-wrapper">
-                                                <div class="single-products">
-                                                    <div class="productinfo text-center">
-                                                        {!! $productItem->content !!}
+                                        {{--									<input type="text" name="quantity" value="3"/>--}}
+                                    <br>
+                                    <br>
+                                    <br>
+
+                                    <a class="add_to_cart"
+                                       data-url="{{ route('addToCart', ['id' => $productItem->id]) }}" href="#">
+                                        <button type="submit" class="btn btn-fefault cart ">
+										<i class="fa fa-shopping-cart"></i>
+                                        Add to cart
+                                        </button>
+                                    </a>
+
+								</span>
+                                </div><!--/product-information-->
+                            </div>
+
+
+                            <div class="col-sm-5">
+                                <div class="category-tab shop-details-tab">
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade active in" id="details">
+                                            <div>
+                                                <div class="product-image-wrapper">
+                                                    <div class="single-products">
+                                                        <div class="productinfo text-center">
+                                                            {!! $productItem->content !!}
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -154,21 +182,26 @@
                                     </div>
                                 </div>
                             </div>
+
                         </div>
 
                     </div>
 
-                </div>
             </div>
         </div>
     </section>
 
     <script>
-        // Initiate zoom effect:
         imageZoom("myimage", "myresult");
-    </script>
-@endsection
 
+    </script>
+    <script src="{{ asset('home/home.js') }}"></script>
+
+
+@endsection
+@section('js')
+    <script src="{{ asset('home/home.js') }}"></script>
+@endsection
 
 
 

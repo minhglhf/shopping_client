@@ -20,16 +20,9 @@ $baseurl = config('app.base_url');
                         @foreach($sliders as $key => $slider)
 
                             <div class="item {{ $key==0 ? 'active' : '' }}">
-                                <div class="col-sm-6">
-{{--                                    <h1><span>E</span>-SHOPPER</h1>--}}
-{{--                                    <h2>{{$slider->name}}</h2>--}}
-{{--                                    <p>{{$slider->description}} </p>--}}
-{{--                                    <button type="button" class="btn btn-default get">Get it now</button>--}}
-                                </div>
-                                <div class="col-sm-12">
-                                    <img src="{{$baseurl . $slider->image_path }}" class="img-responsive" alt="" style="width: 100%"/>
-{{--                                    <img src="/eshopper/images/home/girl1.jpg" class="girl img-responsive" alt="" />--}}
-{{--                                                                        <img src="/eshopper/images/home/pricing.png" class="pricing" alt=""/>--}}
+
+                                <div class="col-sm-11" style="margin: auto">
+                                    <img src="{{$baseurl . $slider->image_path }}" class="" alt="" style="width: 100%"/>
                                 </div>
                             </div>
 

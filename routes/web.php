@@ -25,3 +25,10 @@ Route::get('/product/{id}',[
     'uses' => 'ProductController@index'
 ]);
 
+Route::get('/product/add-to-cart/{id}', 'ProductController@addToCart')->name('addToCart');
+Route::get('/products/clear-cart', 'ProductController@clearCart')->name('clearCart');
+Route::get('/products/update-cart', 'ProductController@updateCart')->name('updateCart');
+Route::get('/products/delete-cart', 'ProductController@deleteCart')->name('deleteCart');
+
+
+Route::get('/products/show-cart', 'ProductController@showCart')->name('showCart');
