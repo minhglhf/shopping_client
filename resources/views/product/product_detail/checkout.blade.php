@@ -49,8 +49,8 @@
                                     <input type="radio" name="payment">Chuyển khoản
                                 </div>
 
-                                <a class="" href="">
-                                    <button
+                                <a class="" href="{{ route('home') }}">
+                                    <button class="send_checkout"
                                         style="align-items: center; background-color: red; border: 1px solid black; color: white; font-size: 30px">
                                         Gửi đơn hàng
                                     </button>
@@ -66,6 +66,17 @@
 
         </div>
     </section> <!--/#cart_items-->
+
+    <script>
+        function checkout(){
+            alert('gửi thành công');
+        }
+
+        $(function () {
+            $(document).on('click','.send_checkout', checkout);
+
+        });
+    </script>
 @endsection
 
 @section('js')

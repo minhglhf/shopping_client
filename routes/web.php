@@ -13,7 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'HomeController@index')->name('home');
+//Route::get('/', 'LoginController@index')->name('login');
+
+//Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/category/{slug}/{id}',[
    'as' => 'category.product',
@@ -34,3 +36,17 @@ Route::get('/products/delete-cart', 'ProductController@deleteCart')->name('delet
 Route::get('/products/show-cart', 'ProductController@showCart')->name('showCart');
 
 Route::get('/products/checkout', 'ProductController@checkout')->name('checkout');
+
+Auth::routes();
+
+Route::get('/', 'HomeController@index')->name('home');
+
+Route::get('/login', function () {
+    return view('auth/login');
+})->middleware('guest')->name('login');
+
+Route::get('/logout', function(){
+    Auth::logout();
+    return Redirect::to('/');
+})->name('logout');
+//Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');

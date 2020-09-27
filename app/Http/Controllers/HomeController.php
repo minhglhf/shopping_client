@@ -10,6 +10,8 @@ use function Symfony\Component\String\s;
 
 class HomeController extends Controller
 {
+
+
     private $slider;
     private $category;
     private $product;
@@ -19,6 +21,7 @@ class HomeController extends Controller
         $this->slider = $slider;
         $this->category = $category;
         $this->product = $product;
+//        $this->middleware('auth');
     }
 
     public function index()

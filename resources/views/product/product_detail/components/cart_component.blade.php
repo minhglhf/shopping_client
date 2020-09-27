@@ -1,4 +1,4 @@
-<div class="" data-url="{{ route('deleteCart') }}">
+<div class="cart" style="background-color: #fff" data-url="{{ route('deleteCart') }}">
     <div class="container">
         <div class="row">
             <table class="table update_cart_url" data-url="{{ route('updateCart') }}">
@@ -34,7 +34,7 @@
                             <td><input class="quantity" type="number" value="{{ $cart['quantity'] }}" min="1"></td>
                             <td>{{ number_format($cart['quantity'] * $cart['price']) }} VND</td>
                             <td><a href="" data-id="{{ $id }}" class="btn  cart_update">update</a></td>
-                            <td><a href="" data-id="{{ $id }}" class="btn  cart_delete">delete</a></td>
+                            <td><a href="" data-id="{{ $id }}" class="btn btn-danger cart_delete">delete</a></td>
                         </tr>
                     @endforeach
                 @endif
