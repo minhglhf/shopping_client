@@ -1,5 +1,6 @@
 <?php
 
+use App\Category;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -41,9 +42,17 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 
+//Route::get('/login', 'Auth\LoginController@login')->middleware('guest')->name('login');
+
 Route::get('/login', function () {
-    return view('auth/login');
+    $categories = Category::where('parent_id', 0)->get();
+    return view('auth/login', compact('categories'));
 })->middleware('guest')->name('login');
+
+Route::get('/register', function () {
+    $categories = Category::where('parent_id', 0)->get();
+    return view('auth/register', compact('categories'));
+})->middleware('guest')->name('register');
 
 Route::get('/logout', function(){
     Auth::logout();

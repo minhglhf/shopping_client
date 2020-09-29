@@ -1,4 +1,12 @@
-@extends('layouts.app')
+@extends('layouts.master')
+
+@section('title')
+    Login
+@endsection
+
+@section('css')
+    <link rel="stylesheet" href="{{asset('home/home.css')}}">
+@endsection
 
 @section('content')
 <div class="container">
@@ -74,4 +82,7 @@
         </div>
     </div>
 </div>
+@endsection
+@section('js')
+    <link rel="stylesheet" href="{{asset('home/home.js')}}">
 @endsection
