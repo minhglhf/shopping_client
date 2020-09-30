@@ -53,10 +53,13 @@
             </div>
 
             <div class="col-md-6">
-                <h2><a href="{{ route('checkout') }}" class="btn btn-danger check_out">Thanh toán</a></h2>
+                <h2>
+                        <a class="btn btn-danger check_out check_login" >Thanh toán</a>
+                </h2>
             </div>
         </div>
 
 
     </div>
 </div>
+

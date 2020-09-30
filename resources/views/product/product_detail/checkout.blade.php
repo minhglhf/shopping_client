@@ -8,6 +8,21 @@
     <link rel="stylesheet" href="{{asset('home/home.css')}}">
 @endsection
 
+@section('js')
+    <script>
+        function checkout(){
+            alert('gửi thành công');
+        }
+
+        $(function () {
+            $(document).on('click','.send_checkout', checkout);
+
+        });
+    </script>
+    <script src="{{ asset('home/home.js') }}"></script>
+@endsection
+
+
 @section('content')
     <section id="cart_items">
         <div class="container">
@@ -18,7 +33,7 @@
                     <div class="col-sm-12">
                         <div class="shopper-info">
                             <p>Thông tin khách hàng</p>
-                            <form>
+                            <form onsubmit="return false">
                                 <input type="text" placeholder="Họ tên">
                                 <input type="text" placeholder="email">
                                 <input type="text" placeholder="số điện thoại">
@@ -67,18 +82,6 @@
         </div>
     </section> <!--/#cart_items-->
 
-    <script>
-        function checkout(){
-            alert('gửi thành công');
-        }
 
-        $(function () {
-            $(document).on('click','.send_checkout', checkout);
-
-        });
-    </script>
 @endsection
 
-@section('js')
-    <script src="{{ asset('home/home.js') }}"></script>
-@endsection

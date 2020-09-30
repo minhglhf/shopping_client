@@ -17,6 +17,27 @@
     </style>
 @endsection
 
+@section('js')
+    <script>
+        function checkLogin(){
+            x = '{{Auth::check()}}';
+
+            if(x == '') {
+                alert('Bạn phải đăng nhập trước');
+                window.location.href = "{{ route('login')}}"
+            }
+            else  {
+                window.location.href = "{{ route('checkout')}}"
+            }
+        }
+
+        $(function () {
+            $(document).on('click','.check_login', checkLogin);
+        });
+    </script>
+    <script src="{{ asset('home/home.js') }}"></script>
+@endsection
+
 
 @section('content')
 

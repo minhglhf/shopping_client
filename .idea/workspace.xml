@@ -23,17 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c24c3b6-9711-47d3-8d28-2eff8cba5ea1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shopping_client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shopping_client.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/product/product_detail/cart.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/product/product_detail/cart.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/product/product_detail/checkout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/product/product_detail/checkout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/product/product_detail/components/cart_component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/product/product_detail/components/cart_component.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,7 +203,8 @@
       <workItem from="1601178583358" duration="3308000" />
       <workItem from="1601181903783" duration="5159000" />
       <workItem from="1601382367377" duration="977000" />
-      <workItem from="1601385199905" duration="3645000" />
+      <workItem from="1601385199905" duration="4838000" />
+      <workItem from="1601437222314" duration="4117000" />
     </task>
     <servers />
   </component>
